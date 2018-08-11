@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
-import romanNumeralsData from './roman-numeral.data';
 import { RomanNumerals } from './roman-numeral';
+import romanNumeralsData from './roman-numeral.data';
 
 let romanNumerals;
 
