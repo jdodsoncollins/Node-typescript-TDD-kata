@@ -17,8 +17,14 @@ describe('PrimeFactors', () => {
   describe('generate', () => {
     it('Should convert integer to Roman Numeral Output', () => {
       expect(primeFactors.generate(1)).to.deep.equal([]);
-      // expect(primeFactors.generate(2)).to.deep.equal([2]);
-      // expect(primeFactors.generate(3)).to.deep.equal([3]);
+      expect(primeFactors.generate(2)).to.deep.equal([2]);
+      expect(primeFactors.generate(3)).to.deep.equal([3]);
+      expect(primeFactors.generate(4)).to.deep.equal([2,2]);
+      expect(primeFactors.generate(5)).to.deep.equal([5]);
+      expect(primeFactors.generate(6)).to.deep.equal([2,3]);
+      expect(primeFactors.generate(7)).to.deep.equal([7]);
+      expect(primeFactors.generate(9)).to.deep.equal([3, 3]);
+      expect(primeFactors.generate((2 * 3 * 5 * 7 * 13 ))).to.deep.equal([2, 3, 5, 7, 13]);
     });
   });
 

@@ -1,9 +1,24 @@
 export class RomanNumerals {
   public convert(input: number): string {
-    if (input === 2) {
-      return 'II';
-    }
+    let output: string = '';
 
-    return 'I';
+    const mappings = [
+      {'input': 10, 'output': 'X'},
+      {'input': 5, 'output': 'V'},
+      {'input': 5, 'output': 'V'},
+      {'input': 4, 'output': 'IV'},
+      {'input': 1, 'output': 'I'},
+    ];
+
+    mappings.forEach(item => {
+      while (input >= item.input) {
+        output += item.output;
+        input -= item.input;
+      }
+    });
+
+    console.log(output);
+
+    return output;
   }
 }
